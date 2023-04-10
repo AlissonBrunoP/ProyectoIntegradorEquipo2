@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        {PokeDataAli.map((pokemon) => (
+        {PokeData.map((pokemon) => (
           <div key={pokemon.id}>
             <p> {pokemon.id}</p>
             <img src={pokemon.image} alt={pokemon.name} />
