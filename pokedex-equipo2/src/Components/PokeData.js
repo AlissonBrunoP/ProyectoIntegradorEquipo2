@@ -2,7 +2,6 @@ import Mew from '../assets/Images/Iconos e imagenes/mew.png';
 import Pikachu from '../assets/Images/Iconos e imagenes/pikachu.png';
 import Squirtle from '../assets/Images/Iconos e imagenes/squirtle.png';
 
-
 const PokeData = [
 {
     id: "152",
