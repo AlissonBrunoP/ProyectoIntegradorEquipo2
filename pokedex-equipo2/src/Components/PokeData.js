@@ -22,7 +22,7 @@ const PokeData = [
     height: "0,4 m",
     weight: "60,0 Kg",
     description:
-      "it eats Iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body",
+      "It eats Iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body",
     stats: {
       HP: 50,
       ATK: 70,
@@ -88,7 +88,6 @@ const PokeData = [
     color: "#F57D31",
     secondary_color: "",
     main_type: "Fire",
-    secondary_type: "",
     main_ability: "Mega-Punch",
     sendondary_ability: "Fire-Punch",
     height: "0,6 m",

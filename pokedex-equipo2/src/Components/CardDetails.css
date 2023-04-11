@@ -1,0 +1,98 @@
+.container {
+  padding-bottom: 10px;
+}
+
+.containerStats div ul{
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+li.stats {
+  list-style: none;
+  height: 5px;
+  background-color: #ddd;
+  margin-top: 13px;
+  width: 200px;
+}
+
+span.stats-value {
+  display: block;
+  height: 5px;
+}
+
+.stats-value {
+  max-width: 200px;
+}
+
+.nameIdandArrow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.nameIdandArrow h2 {
+  font-size: 35px;
+}
+
+.headerPokemonCard {
+  background-image: url("../assets/Images/Iconos\ e\ imagenes/Pokeball.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.infoPoke {
+  background-color: white;
+  margin: 15px;
+  border-radius: 20px;
+  margin-top: -80px;
+}
+
+.powerType {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.powerType p {
+  border-radius: 50px;
+  font-size: 15px;
+  margin-top: 80px;
+}
+.powerType p span {
+  border-radius: 50px;
+  padding: 5px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.weightHeightandMoves {
+  display: flex;
+  justify-content: space-around;
+  font-size: 13px;
+}
+
+.textMoves {
+  color: #666666;
+  font-size: 10px;
+}
+
+
+.verticalLine1 {
+  border-right: 2px solid #e0e0e0;
+  height: 50px;
+  margin-top: 20px;
+}
+.containerStats {
+  display: flex;
+  justify-content: start;
+  font-size: 13px;
+}
+
+.verticalLine {
+  border-right: 2px solid #e0e0e0;
+  height: 100px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
