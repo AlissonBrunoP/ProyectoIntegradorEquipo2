@@ -22,13 +22,26 @@
     padding: 1rem;
 }
 .search-bar{
-    width: 18rem;
+    margin-left: 1rem;
+    width: 16rem;
     height: 2.5rem;
+    border: 0px;
+    outline: none;
     border-radius: 1.8rem;
 }
 .sort-by{
+    display: flex;
+    justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 100%;
     margin-left: .6rem;
+    outline: none;
+}
+form{
+    width: 19rem;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 1.8rem;
 }
