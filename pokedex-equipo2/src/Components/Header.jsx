@@ -12,7 +12,12 @@ function Header(props) {
 
   const sortPokemon = () => {
     setIsText(!isText);
-    sortById();
+    if (!isText){
+      sortById();
+    }
+    else{
+      sortByName();
+    }
   };
 
   function sortById() {
@@ -22,6 +27,21 @@ function Header(props) {
         return -1;
       }
       if (a.id > b.id) {
+        return 1;
+      }
+      return 0;
+    });
+    props.setPokeList([...sortedList]);
+    console.log(sortedList);
+  }
+
+  function sortByName() {
+    const sortedList = props.pokeList.sort((a, b) => {
+      setIsText(!isText);
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
         return 1;
       }
       return 0;

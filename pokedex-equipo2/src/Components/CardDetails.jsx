@@ -10,7 +10,11 @@ function CardDetails() {
   return (
     <div>
       {PokeData.map((poke) => (
-        <div key={poke.id} style={{ backgroundColor: poke.color }} className="container">
+        <div
+          key={poke.id}
+          style={{ backgroundColor: poke.color }}
+          className="container"
+        >
           <div className="headerPokemonCard">
             <div className="nameIdandArrow">
               <h2>
@@ -100,12 +104,24 @@ function CardDetails() {
               </div>
               <div className="verticalLine"></div>
               <div>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.HP}</p>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.ATK}</p>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.DEF}</p>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.SATK}</p>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.SDEF}</p>
-                <p style={{ marginBottom: "-15px" }}>{poke.stats.SPD}</p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.HP).padStart(3, "0")}
+                </p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.ATK).padStart(3, "0")}
+                </p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.DEF).padStart(3, "0")}
+                </p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.SATK).padStart(3, "0")}
+                </p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.SDEF).padStart(3, "0")}
+                </p>
+                <p style={{ marginBottom: "-15px" }}>
+                  {String(poke.stats.SPD).padStart(3, "0")}
+                </p>
               </div>
               <div>
                 <ul className="listStats">
@@ -115,42 +131,111 @@ function CardDetails() {
                       style={{
                         width: `${poke.stats.HP / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.HP / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
+
                   <li className="stats">
                     <span
                       className="stats-value"
                       style={{
                         width: `${poke.stats.ATK / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.ATK / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
+
                   <li className="stats">
                     <span
                       className="stats-value"
                       style={{
                         width: `${poke.stats.DEF / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.DEF / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
+
                   <li className="stats">
                     <span
                       className="stats-value"
                       style={{
                         width: `${poke.stats.SATK / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.SATK / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
+
                   <li className="stats">
                     <span
                       className="stats-value"
                       style={{
                         width: `${poke.stats.SDEF / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.SDEF / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
@@ -161,6 +246,19 @@ function CardDetails() {
                       style={{
                         width: `${poke.stats.SPD / 2}%`,
                         backgroundColor: poke.color,
+                        borderTopLeftRadius: "10px",
+                        borderBottomLeftRadius: "10px",
+                        opacity: "1",
+                      }}
+                    ></span>
+                    <span
+                      className="stats-value"
+                      style={{
+                        width: `${100 - poke.stats.SPD / 2}%`,
+                        backgroundColor: poke.color,
+                        borderTopRightRadius: "10px",
+                        borderBottomRightRadius: "10px",
+                        opacity: "0.5",
                       }}
                     ></span>
                   </li>
