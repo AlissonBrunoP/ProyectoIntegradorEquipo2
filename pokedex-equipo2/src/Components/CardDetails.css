@@ -7,7 +7,18 @@
   margin-left: -20px;
   line-height: 18px;
 }
-
+.imgPokeBall {
+  position: absolute;
+  margin-left: 140px;
+  margin-top: 130px;
+  width: 57%;
+  opacity: 10%;
+}
+.btnArrowBack {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
 li.stats {
   list-style: none;
   width: 200px;
@@ -24,9 +35,10 @@ span.stats-value {
 
 .nameIdandArrow {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: white;
+  margin: 0 20px;
 }
 
 .nameIdandArrow h2 {

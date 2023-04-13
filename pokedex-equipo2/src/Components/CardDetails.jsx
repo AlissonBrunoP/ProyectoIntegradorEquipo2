@@ -2,7 +2,7 @@ import React from "react";
 import PokeData from "./PokeData";
 import "./CardDetails.css";
 import arrowLeft from "../assets/Images/Iconos e imagenes/arrow-left.svg";
-import pokeBall from "../assets/Images/Iconos e imagenes/Pokeball.png";
+import pokeBall from "../assets/Images/Iconos e imagenes/Pokeball.svg";
 import heightImg from "../assets/Images/Iconos e imagenes/Height.svg";
 import weightImg from "../assets/Images/Iconos e imagenes/Weight.svg";
 
@@ -17,13 +17,17 @@ function CardDetails() {
         >
           <div className="headerPokemonCard">
             <div className="nameIdandArrow">
+              <img src={pokeBall} alt="" className="imgPokeBall" />
+
               <h2>
-                <img src={arrowLeft} alt="" style={{ marginRight: "10px" }} />
+                <button className="btnArrowBack">
+                  <img src={arrowLeft} alt=""  />
+                </button>
                 {poke.name}
               </h2>
               <p>#{poke.id}</p>
             </div>
-            <img src={poke.image} alt={poke.name} />
+            <img className="imgPokemonCard" src={poke.image} alt={poke.name} />
           </div>
 
           <div className="infoPoke">
