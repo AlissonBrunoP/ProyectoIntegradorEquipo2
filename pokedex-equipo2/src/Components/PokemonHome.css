@@ -1,7 +1,8 @@
 .pokemonContainer{
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
+   justify-content: start;
+   flex-wrap: wrap; 
    width: 98vw;
    height: 600px;
    background-color: #ffffff;

@@ -1,53 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { useState } from "react";
 import Pokeball from "../assets/Images/Iconos e imagenes/Pokeball.svg";
 import text from "../assets/Images/Iconos e imagenes/text.svg";
 import num from "../assets/Images/Iconos e imagenes/num.svg";
 import search from "../assets/Images/Iconos e imagenes/search.svg";
+import close from "../assets/Images/Iconos e imagenes/close.svg";
+import PokeData from "./PokeData";
 
 function Header(props) {
   const [isText, setIsText] = useState(false);
-  //   const [sortBy, setSortBy] = useState(text);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const sortPokemon = () => {
     setIsText(!isText);
-    if (!isText){
+    if (!isText) {
       sortById();
-    }
-    else{
+    } else {
       sortByName();
     }
   };
 
   function sortById() {
-    const sortedList = props.pokeList.sort((a, b) => {
-      setIsText(!isText);
-      if (a.id < b.id) {
-        return -1;
-      }
-      if (a.id > b.id) {
-        return 1;
-      }
-      return 0;
-    });
-    props.setPokeList([...sortedList]);
-    console.log(sortedList);
+    const sortedList = [...props.pokeList].sort((a, b) => a.id - b.id);
+    props.setPokeList(sortedList);
+    setIsText(!isText);
   }
 
   function sortByName() {
-    const sortedList = props.pokeList.sort((a, b) => {
-      setIsText(!isText);
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    });
-    props.setPokeList([...sortedList]);
-    console.log(sortedList);
+    const sortedList = [...props.pokeList].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    props.setPokeList(sortedList);
+    setIsText(!isText);
+  }
+
+  function handleSearchChange(event) {
+    setSearchTerm(event.target.value);
+  }
+
+  useEffect(() => {
+    const searchResults = PokeData.filter(
+      (pokemon) =>
+        pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        pokemon.id.toString().includes(searchTerm.toLowerCase())
+    );
+    props.setPokeList(searchResults);
+  }, [searchTerm]);
+
+  function handleSearchReset() {
+    setSearchTerm("");
   }
 
   return (
@@ -57,13 +58,20 @@ function Header(props) {
         <h2>Pokédex</h2>
       </div>
       <div className="search-section">
-        <form>
-          <input
-            type="image"
+        <form onReset={handleSearchReset}>
+          <img
             src={search}
-            style={{ width: "18px", marginLeft: "8px" }}
+            alt="Icono de búsqueda"
+            style={{ width: "18px", marginLeft: "15px" }}
           />
-          <input className="search-bar" type="search" placeholder="search" />
+
+          <input
+            className="search-bar"
+            type="search"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
         </form>
         <button
           className="sort-by"
@@ -74,7 +82,7 @@ function Header(props) {
           <img
             style={{ width: "20px" }}
             src={isText ? text : num}
-            alt="Icono texto"
+            alt="Icono de ordenamiento"
           />
         </button>
       </div>
