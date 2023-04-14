@@ -1,0 +1,36 @@
+#error-page{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F9CF30;
+}
+#error-page h1 {
+    color: black;
+
+
+}
+#error-page h2 {
+    font-size: 150px;
+    margin: 0;
+    color:black;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.errorButton{
+    background-color: #dc0a2d;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.errorImage{
+    width: 180px;
+    margin-top: 20px;
+    
+}
