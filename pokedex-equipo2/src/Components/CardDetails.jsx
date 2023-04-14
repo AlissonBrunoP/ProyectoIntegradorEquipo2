@@ -23,7 +23,7 @@ function CardDetails() {
       <div
         key={poke.id}
         style={{ backgroundColor: poke.color }}
-        className="container"
+        className="containerCard"
       >
         <div className="headerPokemonCard">
           <div className="nameIdandArrow">
