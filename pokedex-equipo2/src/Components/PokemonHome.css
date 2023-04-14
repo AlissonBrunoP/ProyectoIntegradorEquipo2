@@ -43,7 +43,8 @@
 }
 
 .idPokemonHome{
-    color: #212121;
+    color: var(--pokemon-color);
+    font-weight: bold;
     opacity: 50%;
     text-align: end;
     margin-top: 0.4rem;
