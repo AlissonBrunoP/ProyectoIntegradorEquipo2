@@ -44,7 +44,16 @@ span.stats-value {
 .nameIdandArrow h2 {
   font-size: 35px;
 }
-
+.imgPokemonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgPokemonContainer button{
+  border: none;
+  height: 30px;
+  background-color: transparent;
+}
 .headerPokemonCard {
   background-image: url("../assets/Images/Iconos\ e\ imagenes/Pokeball.png");
   background-repeat: no-repeat;
@@ -106,3 +115,4 @@ span.stats-value {
   margin-top: 20px;
   margin-right: 10px;
 }
+
