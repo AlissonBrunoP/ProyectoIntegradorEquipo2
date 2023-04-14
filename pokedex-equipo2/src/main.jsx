@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/pokedex/:pokedexId", //PLANTEO DE NUESTRAS RUTAS
+    path: "/pokedex/:pokedexId",
     element: <CardDetails />,
     errorElement: <ErrorPage />,
   },

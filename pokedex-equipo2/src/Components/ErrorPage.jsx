@@ -12,13 +12,13 @@ function ErrorPage() {
   };
 
   return (
-    <div id="error-page">
+    <div id="error-page" style={{ backgroudColor: "white" }}>
       <img src={Errorimage} alt="" />
-      <h1>ps!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+      <h1>Page not found</h1>
+      <p></p>
       <p>
         <Link to={`/`} replace={true}>
-          <button onClick={onClickReturn}>Return to homepage</button>
+          <button onClick={onClickReturn}>Home</button>
         </Link>
       </p>
     </div>

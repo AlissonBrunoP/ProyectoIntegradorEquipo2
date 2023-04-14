@@ -3,7 +3,7 @@ import PokeData from "./PokeData";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 function PokemonHome(props) {
-  const { pokedexId } = useParams(); //1, 2, 3
+  const { pokedexId } = useParams();
 
   const navigate = useNavigate();
 

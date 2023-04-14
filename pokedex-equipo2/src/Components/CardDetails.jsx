@@ -8,12 +8,9 @@ import weightImg from "../assets/Images/Iconos e imagenes/Weight.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 function CardDetails() {
-  const { pokedexId } = useParams(); //1, 2, 3
-  console.log(pokedexId);
+  const { pokedexId } = useParams();
 
   const poke = PokeData.find((pokemon) => pokemon.id === pokedexId);
-
-  console.log(poke);
 
   const navigate = useNavigate();
 
