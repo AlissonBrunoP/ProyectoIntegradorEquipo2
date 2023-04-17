@@ -44,6 +44,10 @@ span.stats-value {
 .nameIdandArrow h2 {
   font-size: 35px;
 }
+.imgPokemonCard{
+  z-index: 1;
+}
+
 .imgPokemonContainer{
   display: flex;
   justify-content: center;
@@ -53,6 +57,7 @@ span.stats-value {
   border: none;
   height: 30px;
   background-color: transparent;
+  z-index: 1;
 }
 .headerPokemonCard {
   background-image: url("../assets/Images/Iconos\ e\ imagenes/Pokeball.png");
