@@ -1,0 +1,56 @@
+.header {
+  background-color: #dc0a2d;
+  padding-bottom: 25px;
+}
+.banner {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: auto;
+  width: 100vw;
+}
+
+.Pokeball-icon {
+  width: 100%;
+  max-width: 2rem;
+  padding: 1rem;
+}
+.search-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.search-bar {
+  margin-left: 1rem;
+  width: 15rem;
+  height: 2.5rem;
+  border: 0px;
+  outline: none;
+  border-radius: 1.8rem;
+}
+.btnClose {
+  border-radius: 1.8rem;
+  background-color: white;
+  outline: none;
+}
+.btnClose img {
+  width: 13px;
+}
+.sort-by {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  margin-left: 0.6rem;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+form {
+  width: 19rem;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 1.8rem;
+}
