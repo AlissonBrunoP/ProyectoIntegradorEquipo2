@@ -60,7 +60,7 @@ span.stats-value {
   z-index: 1;
 }
 .headerPokemonCard {
-  background-image: url("../assets/Images/Iconos\ e\ imagenes/Pokeball.png");
+  /* background-image: url("../assets/Images/Iconos\ e\ imagenes/Pokeball.png"); */
   background-repeat: no-repeat;
   background-size: contain;
 }
