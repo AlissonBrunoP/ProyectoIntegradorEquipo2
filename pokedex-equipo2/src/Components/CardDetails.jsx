@@ -6,8 +6,8 @@ import pokeBall from "../assets/Images/Iconos e imagenes/Pokeball.svg";
 import heightImg from "../assets/Images/Iconos e imagenes/Height.svg";
 import weightImg from "../assets/Images/Iconos e imagenes/Weight.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import prevCard from "../assets/Images/Iconos e imagenes/left.svg"
-import nextCard from "../assets/Images/Iconos e imagenes/rigth.svg"
+import prevCard from "../assets/Images/Iconos e imagenes/left.svg";
+import nextCard from "../assets/Images/Iconos e imagenes/rigth.svg";
 
 function CardDetails() {
   const { pokedexId } = useParams();
@@ -16,26 +16,26 @@ function CardDetails() {
 
   const navigate = useNavigate();
 
+  const currentIndex = PokeData.findIndex(
+    (pokemon) => pokemon.id === pokedexId
+  );
   const onClickReturn = () => {
     navigate(`/`, { replace: true });
   };
   const onClickPrev = () => {
-    const currentIndex = PokeData.findIndex(pokemon => pokemon.id === pokedexId);
-    const prevIndex = (currentIndex - 1 + PokeData.length) % PokeData.length;
+    const prevIndex = currentIndex - 1;
     const prevPokemon = PokeData[prevIndex];
     navigate(`/pokedex/${prevPokemon.id}`, { replace: true });
   };
   const onClickNext = () => {
-    const currentIndex = PokeData.findIndex(pokemon => pokemon.id === pokedexId);
-    const nextIndex = (currentIndex + 1 + PokeData.length) % PokeData.length;
+    const nextIndex = currentIndex + 1;
     const nextPokemon = PokeData[nextIndex];
     navigate(`/pokedex/${nextPokemon.id}`, { replace: true });
   };
- 
+
   return (
     <div>
       <div
-     
         key={poke.id}
         style={{ backgroundColor: poke.color }}
         className="containerCard"
@@ -43,7 +43,7 @@ function CardDetails() {
         <div className="headerPokemonCard">
           <div className="nameIdandArrow">
             <img src={pokeBall} alt="" className="imgPokeBall" />
-           
+
             <h2>
               <Link to={`/`} replace={true}>
                 <button className="btnArrowBack" onClick={onClickReturn}>
@@ -54,13 +54,17 @@ function CardDetails() {
             </h2>
             <p>#{poke.id}</p>
           </div>
-          <section className="imgPokemonContainer" >
-          <button onClick={onClickPrev}><img src={prevCard} alt="prevCard"/> </button>
-          <img className="imgPokemonCard" src={poke.image} alt={poke.name} />
-          <button onClick={onClickNext}><img src={nextCard} alt="nextCard"/></button>
-        </section>
+          <section className="imgPokemonContainer">
+            <button onClick={onClickPrev}>
+              <img src={prevCard} alt="prevCard" />{" "}
+            </button>
+            <img className="imgPokemonCard" src={poke.image} alt={poke.name} />
+            <button onClick={onClickNext}>
+              <img src={nextCard} alt="nextCard" />{" "}
+            </button>
+          </section>
         </div>
-        
+
         <div className="infoPoke">
           <div className="powerType">
             <p>
