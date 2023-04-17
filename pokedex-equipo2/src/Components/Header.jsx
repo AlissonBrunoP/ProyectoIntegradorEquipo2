@@ -4,7 +4,6 @@ import Pokeball from "../assets/Images/Iconos e imagenes/Pokeball.svg";
 import text from "../assets/Images/Iconos e imagenes/text.svg";
 import num from "../assets/Images/Iconos e imagenes/num.svg";
 import search from "../assets/Images/Iconos e imagenes/search.svg";
-import close from "../assets/Images/Iconos e imagenes/close.svg";
 import PokeData from "./PokeData";
 
 function Header(props) {
