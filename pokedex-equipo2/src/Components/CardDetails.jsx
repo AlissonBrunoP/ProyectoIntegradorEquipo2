@@ -23,12 +23,12 @@ function CardDetails() {
     navigate(`/`, { replace: true });
   };
   const onClickPrev = () => {
-    const prevIndex = currentIndex - 1;
+    const prevIndex = (currentIndex - 1 + PokeData.length) % PokeData.length;
     const prevPokemon = PokeData[prevIndex];
     navigate(`/pokedex/${prevPokemon.id}`, { replace: true });
   };
   const onClickNext = () => {
-    const nextIndex = currentIndex + 1;
+    const nextIndex = (currentIndex + 1 + PokeData.length) % PokeData.length;
     const nextPokemon = PokeData[nextIndex];
     navigate(`/pokedex/${nextPokemon.id}`, { replace: true });
   };
